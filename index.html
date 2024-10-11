@@ -5,7 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,300..900&display=swap" rel="stylesheet">
         <style>
             body {
-                background-color:rgb(0, 0, 0);
+                background-color:black;
             }
             h1 {
                 color: whitesmoke;
@@ -24,6 +24,31 @@
                 font-family: "Sixtyfour Convergence", sans-serif;
                 text-align: right;
             }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+/* Style box */
+.box {
+    width: 100px;
+    height: 100px;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Style img */
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
             
 
         </style>
@@ -32,11 +57,19 @@
         <h1>Grinding Info
             <p>Links til diverse Poe stuff</p>
         </h1>
-        <div class="photo">
-            <a href="https://www.google.com" target="_blank">
-            <img src="https://www.poewiki.net/images/9/9c/Chaos_Orb_inventory_icon.png" alt="Chaos Orb" style="width: 60px; height: 60px;">
-            <p style="display: none;">Denne tekst er skjult.</p>
-        </a>
         </div>
+        <div class="container">
+            <div class="box">
+                <a href="https://poedb.tw/us/Small_Cluster_Jewel#EnchantmentModifiers" target="_blank">
+                <img src="https://www.poewiki.net/images/9/9d/Small_Cluster_Jewel_inventory_icon.png" alt="Billede 1">
+            </div>
+            <div class="box">
+                <a href="https://poedb.tw/us/Medium_Cluster_Jewel#EnchantmentModifiers" target="_blank">
+                <img src="https://www.poewiki.net/images/e/e0/Medium_Cluster_Jewel_inventory_icon.png" alt="Billede 2">
+            </div>
+            <div class="box">
+                <a href="https://poedb.tw/us/Large_Cluster_Jewel#EnchantmentModifiers" target="_blank">
+                <img src="https://www.poewiki.net/images/c/c8/Large_Cluster_Jewel_inventory_icon.png" alt="Billede 3">
+            </div>
     </body>
 </html>
