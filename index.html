@@ -3,45 +3,104 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
 
     </head>
     <body>
-        <h1>Grinding Info
+        <div class="sidebar">
+            <h2>Path of Exile</h2>
+            <ul class="fixed-items">
+              <li class="menu-item">
+                <a href="https://poedb.tw/us/Modifiers" class="menu-link" target="_blank">
+                  <img src="https://www.poewiki.net/images/9/9c/Mirror_of_Kalandra_inventory_icon.png" alt="Ikon 1" class="menu-icon">
+                  <span>Poe db mods</span>
+                </a>
+                <li class="menu-item">
+                    <a href="https://poedb.tw/us/Small_Cluster_Jewel#EnchantmentModifiers" class="menu-link" target="_blank">
+                      <img src="https://www.poewiki.net/images/9/9d/Small_Cluster_Jewel_inventory_icon.png" alt="Ikon 1" class="menu-icon">
+                      <span>Small Cluster Jewel</span>
+                    </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://poedb.tw/us/Medium_Cluster_Jewel#EnchantmentModifiers" class="menu-link" target="_blank">
+                  <img src="https://www.poewiki.net/images/e/e0/Medium_Cluster_Jewel_inventory_icon.png" alt="Ikon 2" class="menu-icon">
+                  <span>Medium Cluster Jewel</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://poedb.tw/us/Large_Cluster_Jewel#EnchantmentModifiers" class="menu-link" target="_blank">
+                  <img src="https://www.poewiki.net/images/c/c8/Large_Cluster_Jewel_inventory_icon.png" alt="Ikon 3" class="menu-icon">
+                  <span>Large Cluster Jewel</span>
+                </a>
+              </li>
+              <li class="menu-item" onclick="openModal('Images/syndicate.png')">
+                <img src="https://www.poewiki.net/images/a/a5/Veiled_Orb_inventory_icon.png" alt="Ikon 4" class="menu-icon">
+                <span>Syndicate Cheat Sheet</span>
+              </li>
+              <li class="menu-item" onclick="openModal('Images/Heist.png')">
+                <img src="https://www.poewiki.net/images/e/eb/Rogue%27s_Marker_inventory_icon.png" alt="Ikon 4" class="menu-icon">
+                <span>Heist Cheat Sheet</span>
+              </li>
+            </ul>
+        
+            <!-- Nye menupunkter -->
+            <ul class="additional-items">
+              <li class="menu-item">
+                <a href="https://www.poelab.com/kmllf/" class="menu-link" target="_blank">
+                    <img src="https://www.poelab.com/wp-content/uploads/2018/12/TrialIcon.png" alt="Ikon 4" class="menu-icon">
+                  <span>Uber Lab</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.poelab.com/5i8qp/" class="menu-link" target="_blank">
+                    <img src="https://www.poelab.com/wp-content/uploads/2018/12/Gold-Key.png" alt="Ikon 4" class="menu-icon">
+                  <span>Merc Lab</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.poelab.com/uchst/" class="menu-link" target="_blank">
+                    <img src="https://www.poelab.com/wp-content/uploads/2018/12/Silver-Key.png" alt="Ikon 4" class="menu-icon">
+                  <span>Cruel Lab</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.poelab.com/x1l5c/" class="menu-link" target="_blank">
+                    <img src="https://www.poelab.com/wp-content/uploads/2018/12/treasure-key.png" alt="Ikon 4" class="menu-icon">
+                  <span>Normal Lab</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://poe.ninja/builds/settlers" class="menu-link" target="_blank">
+                    <img src="Images/ninja.png" alt="Ikon 4" class="menu-icon">
+                  <span>Poe Ninja Builds</span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.filterblade.xyz/" class="menu-link" target="_blank">
+                    <img src="https://www.poewiki.net/images/9/9c/Chaos_Orb_inventory_icon.png" alt="Ikon 4" class="menu-icon">
+                  <span>Neversink lootfilter</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+          
+            <div class="main-content">
+            </div>
+        <h1>
+        </h1>
             <p>        
                 <form action="https://www.poewiki.net/w/index.php" method="get" target="_blank" onsubmit="return clearSearchField()">
                 <input type="text" name="search" placeholder="Search on PoEWiki" id="search">
                 <button type="submit">Go</button>
               </form> 
             </p>
+              <!-- Modal til billedet -->
+  <div id="myModal" class="modal" onclick="closeModal(event)">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" src="billede.png" alt="Stort billede">
+  </div>
 
-        </h1>
-        <div class="gallery">
-            <img src="Images/Gravicius.png" alt="Billede 1" class="thumbnail" onclick="openModal('Images/syndicate.png')">
-            <span class="tooltip">Syndicate Cheatsheet</span>
-        </div>   
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
-        </div> 
-        <div class="container">
-            <div class="box">
-                <a href="https://poedb.tw/us/Small_Cluster_Jewel#EnchantmentModifiers" target="_blank">
-                <img src="https://www.poewiki.net/images/9/9d/Small_Cluster_Jewel_inventory_icon.png" alt="Billede 1">
-                <span class="tooltip">Small Cluster Jewel</span>
-            </div>
-            <div class="box">
-                <a href="https://poedb.tw/us/Medium_Cluster_Jewel#EnchantmentModifiers" target="_blank">
-                <img src="https://www.poewiki.net/images/e/e0/Medium_Cluster_Jewel_inventory_icon.png" alt="Billede 2">
-                <span class="tooltip">Medium Cluster Jewel</span>
-            </div>
-            <div class="box">
-                <a href="https://poedb.tw/us/Large_Cluster_Jewel#EnchantmentModifiers" target="_blank">
-                <img src="https://www.poewiki.net/images/c/c8/Large_Cluster_Jewel_inventory_icon.png" alt="Billede 3">
-                <span class="tooltip">Large Cluster Jewel</span>
-            </div>
-   
             <script>
                 function clearSearchField() {
                     // Tillader formularen at blive indsendt

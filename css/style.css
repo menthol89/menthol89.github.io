@@ -19,75 +19,20 @@ h1 {
     font-family: "Sixtyfour Convergence", sans-serif;
     font-size: 36px;
 }
-p {
-    font-family: "Red Hat Display", sans-serif;
+h2 {
+    font-family: "Sixtyfour Convergence", sans-serif;
     font-size: 22px;
 }
 
-.container {
-display: flex;
-gap: 5px;
-width: 250px;
-height: 70px;
-background-color: rgba(0, 0, 0, 0.6); /* Sort, let gennemsigtig baggrund */
-justify-content: center;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-border: 1px solid #333;
-border-radius: 4px;
-padding: 10px;
-margin-top: 600px;   /* Flytter ned */
-margin-left: 20px;  /* Flytter til højre */
-}
-/* Style box */
-.box {
-width: 70px;
-height: 70px;
-border-radius: 0px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-transition: transform 0.2s ease;
-}
-.tooltip {
-    visibility: hidden; /* Skjuler tooltip som standard */
-    width: 120px; /* Bredde af tooltip */
-    background-color: black; /* Baggrundsfarve */
-    color: #fff; /* Tekstfarve */
-    text-align: center; /* Centrering af tekst */
-    border-radius: 5px; /* Rundede hjørner */
-    padding: 5px; /* Indvendig polstring */
-    position: absolute; /* Gør det muligt at placere tooltip */
-    z-index: 1; /* Sørger for at tooltip er ovenfor andre elementer */
-    bottom: 125%; /* Placerer tooltip over elementet */
-    left: 50%; /* Centrerer tooltip horisontalt */
-    margin-left: -60px; /* Justerer positionen for at centrere */
-    opacity: 0; /* Gør tooltip usynlig */
-    transition: opacity 0.3s; /* Tilføjer overgangseffekt */
-}
 
-.box:hover {
-transform: scale(1.05);
-}
-.box:hover .tooltip {
-    visibility: visible; /* Gør tooltip synlig ved hover */
-    opacity: 1; /* Gør tooltip synlig */
-}
-
-/* Style img */
-.box img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-form {
-    display: flex;
+form {                  /* DETTE ER SEARCH BAR */
+    display: flex; 
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 10px;
   }
   
-  input[type="text"] {
+  input[type="text"] {  /* DETTE ER SEARCH BAR */
     padding: 8px;
     width: 200px;
     border: 2px solid #333;
@@ -97,7 +42,7 @@ form {
     font-size: 16px;
   }
   
-  button {
+  button {              /* DETTE ER SEARCH BAR */
     padding: 8px 16px;
     background-color: #af4c4c;
     color: rgba(245, 245, 245, 0.534);
@@ -107,67 +52,142 @@ form {
     font-size: 16px;
   }
   
-  button:hover {
+  button:hover {        /* DETTE ER SEARCH BAR */
     background-color: #45a049;
   }
 
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-.thumbnail {
-    width: 100px; /* Standard størrelse for miniaturebilleder */
-    margin: 2px;
-    cursor: pointer; /* Vis pointer ved hover */
-    transition: transform 0.2s; /* Tilføj en overgangseffekt */
-    display: flex;
-    min-height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Sort, let gennemsigtig baggrund */
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid #333;
-    padding: 10px;
-    margin-top: 20px;   /* Flytter ned */
-    margin-left: 20px;  /* Flytter til højre */
-}
-.thumbnail img {
-    width: 100%; /* Billedet dækker hele thumbnailens bredde */
-    height: 100%; /* Billedet dækker hele thumbnailens højde */
-    object-fit: cover; /* Sørger for at billedet dækker uden at ændre aspektforholdet */
-    display: block; /* Fjern mellemrum under billedet */
-}
-.thumbnail:hover {
-    transform: scale(1.05); /* Forstørrelse ved hover */
-}
-.gallery:hover .tooltip {
-    visibility: visible; /* Gør tooltip synlig ved hover */
-    opacity: 1; /* Gør tooltip synlig */
-}
 
-.modal {
-    display: none; /* Skjul modal som standard */
+.sidebar {              /* SIDEBAR */
+    width: 205px;
+    background-color: rgba(44, 62, 80, 0.3); /* 0.8 = 80% opacitet */
+    color: white;
+    padding: 20px;
     position: fixed;
-    z-index: 1000; /* Sæt modal ovenpå andet indhold */
-    left: 0;
-    top: 0;
-    width: 100%; /* Fuldkornslængde */
-    height: 100%; /* Fuldkornshøjde */
-    overflow: auto; /* Tilføj rullefelt, hvis nødvendigt */
-    background-color: rgba(0, 0, 0, 0.8); /* Halvtransparent baggrund */
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h2 {         /* SIDEBAR */
+    text-align: center;
+  }
+  
+  .sidebar ul {         /* SIDEBAR */
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .fixed-items {
+    flex: 0 0 auto; /* Sørger for, at faste elementer ikke vokser */
+  }
+  
+  .additional-items {
+    margin-top: auto; /* Skubber disse elementer til bunden */
+  }
+  
+  .menu-item {          /* SIDEBAR */
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-item .menu-icon {   /* SIDEBAR */
+    width: 44px; /* Justér ikonen størrelse her */
+    height: 44px;
+    margin-right: 10px; /* Afstand mellem ikon og tekst */
+  }
+
+  
+  
+  .menu-item span {     /* SIDEBAR */
+    font-size: 16px;
+  }
+  
+  .menu-item:hover {    /* SIDEBAR */
+    background-color: #34495e;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  
+  .main-content {       /* SIDEBAR */
+    margin-left: 220px; /* Tilpas efter sidebarens bredde */
+    padding: 2px;
+  }
+
+  .menu-link {          /* SIDEBAR */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Fjern standard understregning */
+    color: inherit; /* Arver tekstfarven fra forældrelementet */
+  }
+
+  .menu-item span {
+    white-space: nowrap; /* Forhindrer teksten i at bryde linje */
+    overflow: hidden; /* Skjuler overskydende tekst */
+    text-overflow: ellipsis; /* Viser '...' når teksten er for lang */
+    max-width: 150px; /* Sæt en maksimal bredde på elementet */
+    display: block; /* Sørger for at det fungerer korrekt */
+  }
+
+
+
+  /* Modal-stil */
+.modal {
+  display: none; /* Gør modalen usynlig fra start */
+  position: fixed;
+  z-index: 100; /* Sørger for, at den ligger øverst */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Halvgennemsigtig sort baggrund */
 }
 
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 90%; /* Bredde af modalbilledet */
-    max-width: 2000px; /* Maksimal bredde */
-    height: auto; /* Automatisk højde */
-
+  display: block;
+  margin: auto;
+  max-width: 80%; /* Justér størrelsen */
+  margin-top: 10%;
 }
 
 .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Modal-stil */
+.modal {
+    display: none; /* Gør modalen usynlig fra start */
+    position: fixed;
+    z-index: 100; /* Sørger for, at den ligger øverst */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Halvgennemsigtig sort baggrund */
+  }
+  
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%; /* Justér størrelsen */
+    margin-top: 10%;
+  }
+  
+  .close {
     position: absolute;
     top: 20px;
     right: 35px;
@@ -175,4 +195,4 @@ form {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-}
+  }
