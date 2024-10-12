@@ -6,6 +6,8 @@ body {
     box-sizing: border-box;
     border-radius: 2em;
     overflow: hidden; /* Forhindrer scroll */
+    background-size: cover; /* Dækker hele baggrunden */
+
 }
 
 html {
