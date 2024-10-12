@@ -48,9 +48,29 @@ border-radius: 0px;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 transition: transform 0.2s ease;
 }
+.tooltip {
+    visibility: hidden; /* Skjuler tooltip som standard */
+    width: 120px; /* Bredde af tooltip */
+    background-color: black; /* Baggrundsfarve */
+    color: #fff; /* Tekstfarve */
+    text-align: center; /* Centrering af tekst */
+    border-radius: 5px; /* Rundede hjørner */
+    padding: 5px; /* Indvendig polstring */
+    position: absolute; /* Gør det muligt at placere tooltip */
+    z-index: 1; /* Sørger for at tooltip er ovenfor andre elementer */
+    bottom: 125%; /* Placerer tooltip over elementet */
+    left: 50%; /* Centrerer tooltip horisontalt */
+    margin-left: -60px; /* Justerer positionen for at centrere */
+    opacity: 0; /* Gør tooltip usynlig */
+    transition: opacity 0.3s; /* Tilføjer overgangseffekt */
+}
 
 .box:hover {
 transform: scale(1.05);
+}
+.box:hover .tooltip {
+    visibility: visible; /* Gør tooltip synlig ved hover */
+    opacity: 1; /* Gør tooltip synlig */
 }
 
 /* Style img */
@@ -90,5 +110,3 @@ form {
   button:hover {
     background-color: #45a049;
   }
-
-  
