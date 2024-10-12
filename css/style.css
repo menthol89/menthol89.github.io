@@ -6,6 +6,8 @@ body {
     background-size: cover; /* Fylder hele skærmen */
     background-repeat: no-repeat; /* Undgår gentagelse */
     background-position: center; /* Centrerer billedet */
+    box-sizing: border-box;
+    border-radius: 2em;
 }
 html {
     min-height: 100%;
