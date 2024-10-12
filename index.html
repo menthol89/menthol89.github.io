@@ -16,7 +16,16 @@
             </p>
 
         </h1>
-        </div>
+        <div class="gallery">
+            <img src="../menthol89.github.io/Images/syndicate.png" alt="Billede 1" class="thumbnail" onclick="openModal(this.src)">
+            <img src="../menthol89.github.io/Images/syndicate.png" alt="Billede 2" class="thumbnail" onclick="openModal(this.src)">
+            <img src="../menthol89.github.io/Images/syndicate.png" alt="Billede 3" class="thumbnail" onclick="openModal(this.src)">
+        </div>   
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div> 
         <div class="container">
             <div class="box">
                 <a href="https://poedb.tw/us/Small_Cluster_Jewel#EnchantmentModifiers" target="_blank">
@@ -33,11 +42,7 @@
                 <img src="https://www.poewiki.net/images/c/c8/Large_Cluster_Jewel_inventory_icon.png" alt="Billede 3">
                 <span class="tooltip">Large Cluster Jewel</span>
             </div>
-            <div class="gallery">
-                <img src="https://via.placeholder.com/150" alt="Billede 1" class="thumbnail" onclick="openModal(this.src)">
-                <img src="https://via.placeholder.com/150" alt="Billede 2" class="thumbnail" onclick="openModal(this.src)">
-                <img src="https://via.placeholder.com/150" alt="Billede 3" class="thumbnail" onclick="openModal(this.src)">
-            </div>       
+   
             <script>
                 function clearSearchField() {
                     // Tillader formularen at blive indsendt
@@ -48,6 +53,26 @@
                     }, 100); // Juster timeouten hvis nødvendigt
                     return true; // Tillader formularen at blive indsendt
                 }
+                function openModal(imageSrc) {
+                const modal = document.getElementById("myModal");
+                const modalImage = document.getElementById("modalImage");
+
+                modal.style.display = "block"; // Vis modal
+                modalImage.src = imageSrc; // Sæt billedet i modal
+}
+
+                function closeModal() {
+                const modal = document.getElementById("myModal");
+                modal.style.display = "none"; // Skjul modal
+}
+
+// Luk modal, når brugeren klikker uden for billedet
+                window.onclick = function(event) {
+                const modal = document.getElementById("myModal");
+                if (event.target == modal) {
+                modal.style.display = "none";
+    }
+}
             </script>     
     </body>
 </html>

@@ -110,3 +110,48 @@ form {
   button:hover {
     background-color: #45a049;
   }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.thumbnail {
+    width: 60px; /* Standard størrelse for miniaturebilleder */
+    margin: 10px;
+    cursor: pointer; /* Vis pointer ved hover */
+    transition: transform 0.2s; /* Tilføj en overgangseffekt */
+}
+.thumbnail:hover {
+    transform: scale(1.05); /* Forstørrelse ved hover */
+}
+
+.modal {
+    display: none; /* Skjul modal som standard */
+    position: fixed;
+    z-index: 1000; /* Sæt modal ovenpå andet indhold */
+    left: 0;
+    top: 0;
+    width: 100%; /* Fuldkornslængde */
+    height: 100%; /* Fuldkornshøjde */
+    overflow: auto; /* Tilføj rullefelt, hvis nødvendigt */
+    background-color: rgba(0, 0, 0, 0.8); /* Halvtransparent baggrund */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%; /* Bredde af modalbilledet */
+    max-width: 2000px; /* Maksimal bredde */
+    height: auto; /* Automatisk højde */
+
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
