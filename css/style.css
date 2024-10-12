@@ -1,11 +1,15 @@
-html, body {
+body {
     margin: 0;
     padding: 0;
-    height: 96%;
+    min-height: 100%;
     background-image: url('../Images/Pathofexile2.jpg');
     background-size: cover; /* Fylder hele skærmen */
     background-repeat: no-repeat; /* Undgår gentagelse */
     background-position: center; /* Centrerer billedet */
+}
+html {
+    min-height: 100%;
+    margin: 0;
 }
 h1 {
     color: whitesmoke;
