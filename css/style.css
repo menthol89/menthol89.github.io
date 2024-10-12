@@ -90,6 +90,7 @@ form {                  /* DETTE ER SEARCH BAR */
   .menu-item {          /* SIDEBAR */
     display: flex;
     align-items: center;
+    width: 100%;
     margin: 5px 0;
     padding: 5px 0;
     color: white;
@@ -122,6 +123,7 @@ form {                  /* DETTE ER SEARCH BAR */
 
   .menu-link {          /* SIDEBAR */
     display: flex;
+    width: 100%;
     align-items: center;
     text-decoration: none; /* Fjern standard understregning */
     color: inherit; /* Arver tekstfarven fra forældrelementet */
