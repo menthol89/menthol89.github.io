@@ -1,14 +1,13 @@
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    background-image: url('../Images/Pathofexile2.jpg');
-    background-size: cover; /* Fylder hele skærmen */
-    background-repeat: no-repeat; /* Undgår gentagelse */
+    background-image: url('../Images/poe2logo2.gif');
+    background-repeat: no-repeat; /* Forhindrer gentagelse */
+    min-height: 100vh; /* Fylder hele højden af viewport */
     background-position: center; /* Centrerer billedet */
     box-sizing: border-box;
     border-radius: 2em;
+    overflow: hidden; /* Forhindrer scroll */
 }
+
 html {
     min-height: 100%;
     margin: 0;
@@ -83,9 +82,10 @@ form {                  /* DETTE ER SEARCH BAR */
     flex: 0 0 auto; /* Sørger for, at faste elementer ikke vokser */
   }
   
-  .additional-items {
-    margin-top: auto; /* Skubber disse elementer til bunden */
-  }
+.additional-items {
+    margin-top: auto; /* Justerer margen over elementerne */
+    margin-bottom: 48px; /* Sikrer, at de skubbes ned */
+}
   
   .menu-item {          /* SIDEBAR */
     display: flex;
@@ -136,6 +136,7 @@ form {                  /* DETTE ER SEARCH BAR */
     max-width: 150px; /* Sæt en maksimal bredde på elementet */
     display: block; /* Sørger for at det fungerer korrekt */
   }
+  
 
 
 
