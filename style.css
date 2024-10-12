@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 96%;
-    background-image: url('/Images/Pathofexile2.JPG');
+    background-image: url(.Images/Pathofexile2.JPG);
     background-size: cover; /* Fylder hele skærmen */
     background-repeat: no-repeat; /* Undgår gentagelse */
     background-position: center; /* Centrerer billedet */
