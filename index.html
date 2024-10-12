@@ -37,6 +37,17 @@
                 <img src="https://via.placeholder.com/150" alt="Billede 1" class="thumbnail" onclick="openModal(this.src)">
                 <img src="https://via.placeholder.com/150" alt="Billede 2" class="thumbnail" onclick="openModal(this.src)">
                 <img src="https://via.placeholder.com/150" alt="Billede 3" class="thumbnail" onclick="openModal(this.src)">
-            </div>            
+            </div>       
+            <script>
+                function clearSearchField() {
+                    // Tillader formularen at blive indsendt
+                    const searchField = document.getElementById("search");
+                    // Ryd søgefeltet med en timeout for at sikre indsendelse
+                    setTimeout(() => {
+                        searchField.value = ""; 
+                    }, 100); // Juster timeouten hvis nødvendigt
+                    return true; // Tillader formularen at blive indsendt
+                }
+            </script>     
     </body>
 </html>
