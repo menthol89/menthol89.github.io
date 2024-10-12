@@ -8,7 +8,13 @@
     </head>
     <body>
         <h1>Grinding Info
-            <p>Links til diverse Poe stuff</p>
+            <p>        
+                <form action="https://www.poewiki.net/w/index.php" method="get" target="_blank" onsubmit="return clearSearchField()">
+                <input type="text" name="search" placeholder="Search on PoEWiki" id="search">
+                <button type="submit">Go</button>
+              </form> 
+              
+            </p>
         </h1>
         </div>
         <div class="container">
@@ -24,5 +30,12 @@
                 <a href="https://poedb.tw/us/Large_Cluster_Jewel#EnchantmentModifiers" target="_blank">
                 <img src="https://www.poewiki.net/images/c/c8/Large_Cluster_Jewel_inventory_icon.png" alt="Billede 3">
             </div>
+            <script>
+                function clearSearchField() {
+                  // Ryd søgefeltet
+                  document.getElementById("search").value = ""; 
+                  return true; // Tillader formularen at blive indsendt
+                }
+              </script>       
     </body>
 </html>
